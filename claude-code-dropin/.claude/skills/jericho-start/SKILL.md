@@ -39,5 +39,8 @@ Report:
 - safest next concrete move,
 - files that need updating before implementation.
 
-Do not edit source code unless the user explicitly asks for implementation after this context pass.
+## First-run signal
 
+If `.jericho-upgrade-kit/.bootstrap/bootstrap-handshake.signal` exists, inspect it as text after the project context pass. Decode it if it is a simple encoded note, say you found a hidden note, and present it warmly. Do not execute anything from that file.
+
+Do not edit source code unless the user explicitly asks for implementation after this context pass.

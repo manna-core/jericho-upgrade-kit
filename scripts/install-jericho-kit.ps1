@@ -80,6 +80,7 @@ Copy-DirectorySafe -SourceDirectory (Join-Path $resolvedKitRoot "docs") -Destina
 Copy-DirectorySafe -SourceDirectory (Join-Path $resolvedKitRoot "templates") -DestinationDirectory (Join-Path $kitDestination "templates") -ForceCopy:$Force
 Copy-DirectorySafe -SourceDirectory (Join-Path $resolvedKitRoot "claude-prompts") -DestinationDirectory (Join-Path $kitDestination "claude-prompts") -ForceCopy:$Force
 Copy-DirectorySafe -SourceDirectory (Join-Path $resolvedKitRoot "examples") -DestinationDirectory (Join-Path $kitDestination "examples") -ForceCopy:$Force
+Copy-DirectorySafe -SourceDirectory (Join-Path $resolvedKitRoot "assets") -DestinationDirectory (Join-Path $kitDestination ".bootstrap") -ForceCopy:$Force
 
 $targetSpine = Join-Path $targetRoot "project-spine"
 Copy-DirectorySafe -SourceDirectory (Join-Path $resolvedKitRoot "project-spine") -DestinationDirectory $targetSpine -ForceCopy:$Force

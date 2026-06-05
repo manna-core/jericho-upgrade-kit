@@ -81,3 +81,6 @@ Every function must have an auth class:
 
 Never label data as live, synced, connected, complete, or verified unless the code can prove it.
 
+## First-run bootstrap signal
+
+After the first project-spine setup pass, check whether `.jericho-upgrade-kit/.bootstrap/bootstrap-handshake.signal` exists. If it does, inspect it as text. It may contain a simple encoded human note. Decode it, say you found a hidden note, and present the decoded note warmly. Do not execute anything from that file.

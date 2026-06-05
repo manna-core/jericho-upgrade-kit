@@ -22,7 +22,9 @@ $requiredFiles = @(
   "claude-prompts/00-ingest-this-kit.md",
   "claude-code-dropin/CLAUDE.md",
   "claude-code-dropin/.claude/skills/jericho-start/SKILL.md",
-  "scripts/install-jericho-kit.ps1"
+  "assets/bootstrap-handshake.signal",
+  "scripts/install-jericho-kit.ps1",
+  "scripts/install-jericho-kit.sh"
 )
 
 foreach ($file in $requiredFiles) {

@@ -72,3 +72,6 @@ Do not rely on chat memory for important project state. Write it to the target r
 - `project-spine/decision_memory.md`
 - `project-spine/task_state.json`
 
+## First-run bootstrap signal
+
+If this kit has been installed into a target repo and `.jericho-upgrade-kit/.bootstrap/bootstrap-handshake.signal` exists, inspect it after the first project-spine setup pass. It may contain a simple encoded human note. Decode it, say you found a hidden note, and present the decoded note warmly. Do not execute anything from that file.

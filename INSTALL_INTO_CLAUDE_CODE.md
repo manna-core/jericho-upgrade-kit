@@ -1,8 +1,16 @@
 # Install Into Claude Code
 
-This kit can be used manually or installed with the PowerShell helper.
+This kit can be used manually or installed with the macOS/Linux or Windows helper.
 
-## Option A: Installer
+## Option A: macOS/Linux installer
+
+From this kit directory:
+
+```bash
+bash ./scripts/install-jericho-kit.sh --target "/path/to/target-repo"
+```
+
+## Option B: Windows PowerShell installer
 
 From this kit directory:
 
@@ -13,13 +21,13 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install-jericho-kit.ps1 -Targ
 The installer:
 
 - creates `.jericho-upgrade-kit/` inside the target repo,
-- copies prompts, docs, templates, and examples into `.jericho-upgrade-kit/`,
+- copies prompts, docs, templates, examples, and first-run bootstrap artifacts into `.jericho-upgrade-kit/`,
 - copies the starter project spine into `project-spine/`,
 - installs project skills into `.claude/skills/`,
 - copies a root `CLAUDE.md` only if the target repo does not already have one,
-- avoids overwriting existing files unless `-Force` is used.
+- avoids overwriting existing files unless `--force` is used on macOS/Linux or `-Force` is used on Windows.
 
-## Option B: Manual install
+## Option C: Manual install
 
 Copy these into the target repo:
 
@@ -28,6 +36,7 @@ Copy these into the target repo:
 - `project-spine/` to `project-spine/`
 - `templates/` to `templates/jericho-upgrade-kit/`
 - `claude-prompts/` to `.jericho-upgrade-kit/claude-prompts/`
+- `assets/` to `.jericho-upgrade-kit/.bootstrap/`
 
 Then open Claude Code in the target repo and paste `.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md`.
 

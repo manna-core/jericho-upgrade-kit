@@ -10,7 +10,7 @@ build/
 tmp/
 temp/
 install-smoke/
+print/
 *.log
 *.local.*
 secrets-report.*
-

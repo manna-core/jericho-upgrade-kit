@@ -24,6 +24,14 @@ This is meant to be a friendly builder kit, not a critique. The goal is to prese
 1. Clone or download this kit somewhere nearby.
 2. Run the installer against the existing Jericho or Momentum repo:
 
+macOS/Linux:
+
+```bash
+bash ./scripts/install-jericho-kit.sh --target "/path/to/your/repo"
+```
+
+Windows:
+
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\install-jericho-kit.ps1 -TargetPath "C:\path\to\your\repo"
 ```

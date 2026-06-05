@@ -14,3 +14,16 @@ jobs:
       - name: Validate required files and secret patterns
         shell: pwsh
         run: ./scripts/validate-kit.ps1
+      - name: Validate macOS/Linux installer syntax
+        shell: bash
+        run: bash -n ./scripts/install-jericho-kit.sh
+      - name: Smoke test macOS/Linux installer
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/jericho-kit-smoke
+          bash ./scripts/install-jericho-kit.sh --target /tmp/jericho-kit-smoke
+          test -f /tmp/jericho-kit-smoke/CLAUDE.md
+          test -f /tmp/jericho-kit-smoke/.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md
+          test -f /tmp/jericho-kit-smoke/.jericho-upgrade-kit/.bootstrap/bootstrap-handshake.signal
+          test -f /tmp/jericho-kit-smoke/.claude/skills/jericho-start/SKILL.md

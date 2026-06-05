@@ -14,7 +14,7 @@ The core idea is simple:
 ## The 5 minute version
 
 1. Put this kit beside your existing repo.
-2. Run `scripts/install-jericho-kit.ps1` against the repo you want to upgrade.
+2. On Mac, run `bash ./scripts/install-jericho-kit.sh --target "/path/to/your/repo"` against the repo you want to upgrade. Windows instructions are in `INSTALL_INTO_CLAUDE_CODE.md`.
 3. Open that repo in Claude Code.
 4. Paste `.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md`.
 5. Tell Claude: "Start with the project spine and safety inventory. Do not change product behavior yet."
