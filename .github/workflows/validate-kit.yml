@@ -1,0 +1,17 @@
+name: Validate kit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate required files and secret patterns
+        shell: pwsh
+        run: ./scripts/validate-kit.ps1
+

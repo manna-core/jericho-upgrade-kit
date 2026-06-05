@@ -1,0 +1,11 @@
+{
+  "notes": [
+    "This file is an example only. Do not rename to settings.json unless you have reviewed Claude Code's current settings docs.",
+    "Keep project settings conservative. Use local settings for machine-specific permissions."
+  ],
+  "recommendedPractice": {
+    "productionActions": "Require explicit human approval in the current session before deploy, push, secret rotation, or destructive database work.",
+    "secrets": "Never allow workflows or hooks to print .env files or secret values."
+  }
+}
+

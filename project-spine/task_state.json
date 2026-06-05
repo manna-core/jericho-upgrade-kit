@@ -1,0 +1,26 @@
+{
+  "project": "Jericho / Marvin upgrade target",
+  "phase": "Phase 0 - Safety and reproducibility",
+  "last_updated": "2026-06-05",
+  "active_batch": "Inventory and project spine setup",
+  "status": "not_started_in_target_repo",
+  "recommended_next_action": "Run /jericho-safety-pass in the target repo and draft the function classification matrix.",
+  "verification": {
+    "install_checked": false,
+    "build_checked": false,
+    "lint_checked": false,
+    "audit_checked": false,
+    "secret_scan_checked": false,
+    "live_config_checked": false
+  },
+  "risks": [
+    "Public/local repo may not match live production.",
+    "Supabase function auth must be classified before mass changes.",
+    "Secrets must be rotated if ever committed or pasted into handoff docs."
+  ],
+  "blocked_on": [
+    "Target repo path",
+    "Live Supabase/Vercel/GitHub access for final verification"
+  ]
+}
+
