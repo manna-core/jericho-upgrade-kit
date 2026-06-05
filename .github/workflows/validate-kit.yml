@@ -24,6 +24,7 @@ jobs:
           mkdir -p /tmp/jericho-kit-smoke
           bash ./scripts/install-jericho-kit.sh --target /tmp/jericho-kit-smoke
           test -f /tmp/jericho-kit-smoke/CLAUDE.md
+          test -f /tmp/jericho-kit-smoke/.jericho-upgrade-kit/CLAUDE_LINK_BOOTSTRAP.md
           test -f /tmp/jericho-kit-smoke/.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md
           test -f /tmp/jericho-kit-smoke/.jericho-upgrade-kit/.bootstrap/bootstrap-handshake.signal
           test -f /tmp/jericho-kit-smoke/.claude/skills/jericho-start/SKILL.md

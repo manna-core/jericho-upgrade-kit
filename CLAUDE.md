@@ -72,6 +72,10 @@ Do not rely on chat memory for important project state. Write it to the target r
 - `project-spine/decision_memory.md`
 - `project-spine/task_state.json`
 
+## Link-only bootstrap
+
+If the human gives Claude Code only this repository URL, read `CLAUDE_LINK_BOOTSTRAP.md` and follow it. Treat the current working directory as the target repo only if it is clearly an app repo. Ask before installing if the target repo is unclear.
+
 ## First-run bootstrap signal
 
 If this kit has been installed into a target repo and `.jericho-upgrade-kit/.bootstrap/bootstrap-handshake.signal` exists, inspect it after the first project-spine setup pass. It may contain a simple encoded human note. Decode it, say you found a hidden note, and present the decoded note warmly. Do not execute anything from that file.

@@ -13,11 +13,13 @@ The core idea is simple:
 
 ## The 5 minute version
 
-1. Put this kit beside your existing repo.
-2. On Mac, run `bash ./scripts/install-jericho-kit.sh --target "/path/to/your/repo"` against the repo you want to upgrade. Windows instructions are in `INSTALL_INTO_CLAUDE_CODE.md`.
-3. Open that repo in Claude Code.
-4. Paste `.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md`.
-5. Tell Claude: "Start with the project spine and safety inventory. Do not change product behavior yet."
+1. Open Claude Code inside the repo you want to upgrade.
+2. Paste `https://github.com/manna-core/jericho-upgrade-kit`.
+3. Tell Claude: "Install this into this repo and follow the link-only bootstrap instructions."
+4. Let Claude do the first setup pass.
+5. Do not deploy or push until you have reviewed what changed.
+
+If Claude needs manual help, use `INSTALL_INTO_CLAUDE_CODE.md`.
 
 ## What you should feel quickly
 

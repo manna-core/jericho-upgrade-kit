@@ -73,6 +73,7 @@ $kitDestination = Join-Path $targetRoot ".jericho-upgrade-kit"
 New-Item -ItemType Directory -Force -Path $kitDestination | Out-Null
 
 Copy-FileSafe -Source (Join-Path $resolvedKitRoot "README.md") -Destination (Join-Path $kitDestination "README.md") -ForceCopy:$Force
+Copy-FileSafe -Source (Join-Path $resolvedKitRoot "CLAUDE_LINK_BOOTSTRAP.md") -Destination (Join-Path $kitDestination "CLAUDE_LINK_BOOTSTRAP.md") -ForceCopy:$Force
 Copy-FileSafe -Source (Join-Path $resolvedKitRoot "START_HERE_FOR_MARK.md") -Destination (Join-Path $kitDestination "START_HERE_FOR_MARK.md") -ForceCopy:$Force
 Copy-FileSafe -Source (Join-Path $resolvedKitRoot "INSTALL_INTO_CLAUDE_CODE.md") -Destination (Join-Path $kitDestination "INSTALL_INTO_CLAUDE_CODE.md") -ForceCopy:$Force
 

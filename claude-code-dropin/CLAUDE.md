@@ -20,6 +20,8 @@ At the start of a meaningful session, read:
 - `.jericho-upgrade-kit/docs/safety-model.md` if present
 - `.jericho-upgrade-kit/docs/nonbreaking-upgrade-policy.md` if present
 
+If the human gave only the GitHub link `https://github.com/manna-core/jericho-upgrade-kit`, read `CLAUDE_LINK_BOOTSTRAP.md` from that repo first, install the kit into the current target repo, then continue from the installed prompt.
+
 Then state:
 
 - current phase,

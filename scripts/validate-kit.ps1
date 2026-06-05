@@ -11,6 +11,7 @@ $requiredFiles = @(
   "START_HERE_FOR_MARK.md",
   "INSTALL_INTO_CLAUDE_CODE.md",
   "CLAUDE.md",
+  "CLAUDE_LINK_BOOTSTRAP.md",
   "docs/safety-model.md",
   "docs/memory-architecture.md",
   "docs/sources.md",

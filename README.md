@@ -4,6 +4,18 @@ A Claude Code-ready upgrade package for Jericho, Marvin, Thought Before Action, 
 
 This is meant to be a friendly builder kit, not a critique. The goal is to preserve what already works, add stronger operating rails, and give Claude Code a clear way to help with security, product memory, integrations, and nonbreaking upgrades.
 
+## Link-only Claude Code path
+
+If Claude Code was given only this GitHub link, it should read `CLAUDE_LINK_BOOTSTRAP.md` first.
+
+For Mark: open Claude Code inside the repo you want to upgrade, paste this link, and say "install this into this repo":
+
+```text
+https://github.com/manna-core/jericho-upgrade-kit
+```
+
+Claude should clone this kit into a temporary folder, install it into the current target repo, and follow the installed first-run prompt.
+
 ## What this kit does
 
 - Gives Claude Code a project memory and build discipline similar to the Manna operating spine.
@@ -19,7 +31,7 @@ This is meant to be a friendly builder kit, not a critique. The goal is to prese
 - It does not assume the public GitHub repo is the same as the live production code.
 - It does not make production changes without the builder explicitly doing that later.
 
-## Fast path
+## Manual fast path
 
 1. Clone or download this kit somewhere nearby.
 2. Run the installer against the existing Jericho or Momentum repo:

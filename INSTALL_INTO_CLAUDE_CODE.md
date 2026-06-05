@@ -2,7 +2,23 @@
 
 This kit can be used manually or installed with the macOS/Linux or Windows helper.
 
-## Option A: macOS/Linux installer
+## Option A: link-only Claude Code path
+
+Open Claude Code inside the repo you want to upgrade. Paste:
+
+```text
+https://github.com/manna-core/jericho-upgrade-kit
+```
+
+Then say:
+
+```text
+Install this into this repo and follow the link-only bootstrap instructions.
+```
+
+Claude should read `CLAUDE_LINK_BOOTSTRAP.md`, clone the kit into a temporary folder, run the correct installer, and then follow `.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md`.
+
+## Option B: macOS/Linux installer
 
 From this kit directory:
 
@@ -10,7 +26,7 @@ From this kit directory:
 bash ./scripts/install-jericho-kit.sh --target "/path/to/target-repo"
 ```
 
-## Option B: Windows PowerShell installer
+## Option C: Windows PowerShell installer
 
 From this kit directory:
 
@@ -21,19 +37,20 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install-jericho-kit.ps1 -Targ
 The installer:
 
 - creates `.jericho-upgrade-kit/` inside the target repo,
-- copies prompts, docs, templates, examples, and first-run bootstrap artifacts into `.jericho-upgrade-kit/`,
+- copies prompts, docs, templates, examples, link-bootstrap notes, and first-run bootstrap artifacts into `.jericho-upgrade-kit/`,
 - copies the starter project spine into `project-spine/`,
 - installs project skills into `.claude/skills/`,
 - copies a root `CLAUDE.md` only if the target repo does not already have one,
 - avoids overwriting existing files unless `--force` is used on macOS/Linux or `-Force` is used on Windows.
 
-## Option C: Manual install
+## Option D: Manual install
 
 Copy these into the target repo:
 
 - `claude-code-dropin/CLAUDE.md` to `CLAUDE.md` or `CLAUDE.jericho-upgrade-kit.md`
 - `claude-code-dropin/.claude/skills/` to `.claude/skills/`
 - `project-spine/` to `project-spine/`
+- `CLAUDE_LINK_BOOTSTRAP.md` to `.jericho-upgrade-kit/CLAUDE_LINK_BOOTSTRAP.md`
 - `templates/` to `templates/jericho-upgrade-kit/`
 - `claude-prompts/` to `.jericho-upgrade-kit/claude-prompts/`
 - `assets/` to `.jericho-upgrade-kit/.bootstrap/`
