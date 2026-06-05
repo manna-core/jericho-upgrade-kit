@@ -16,7 +16,7 @@ The core idea is simple:
 1. Put this kit beside your existing repo.
 2. Run `scripts/install-jericho-kit.ps1` against the repo you want to upgrade.
 3. Open that repo in Claude Code.
-4. Paste `claude-prompts/00-ingest-this-kit.md`.
+4. Paste `.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md`.
 5. Tell Claude: "Start with the project spine and safety inventory. Do not change product behavior yet."
 
 ## What you should feel quickly
@@ -67,4 +67,3 @@ After install, Claude Code should expose project skills:
 The project is big enough that the dangerous path is not "Claude writes bad code once." The dangerous path is losing track of why things were built, which endpoints are public, which data is sensitive, and what changed between sessions.
 
 This kit is designed to fix that.
-

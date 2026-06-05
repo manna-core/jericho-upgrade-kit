@@ -21,17 +21,16 @@ This is meant to be a friendly builder kit, not a critique. The goal is to prese
 
 ## Fast path
 
-1. Open the existing Jericho or Momentum repo in Claude Code.
-2. Clone or download this kit somewhere nearby.
-3. Run the installer:
+1. Clone or download this kit somewhere nearby.
+2. Run the installer against the existing Jericho or Momentum repo:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\install-jericho-kit.ps1 -TargetPath "C:\path\to\your\repo"
 ```
 
-4. Open Claude Code in the target repo.
-5. Paste the contents of `claude-prompts/00-ingest-this-kit.md`.
-6. Start with `/jericho-start`, then `/jericho-safety-pass`.
+3. Open Claude Code in the target repo.
+4. Paste the contents of `.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md`.
+5. Start with `/jericho-start`, then `/jericho-safety-pass`.
 
 If the repo already has a `CLAUDE.md`, the installer will avoid overwriting it and will place the kit instructions beside it for Claude to merge.
 
@@ -53,4 +52,3 @@ This repository is intentionally safe to share publicly. It contains patterns, t
 ## For Mark
 
 Start here: `START_HERE_FOR_MARK.md`.
-

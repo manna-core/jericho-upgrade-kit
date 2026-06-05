@@ -13,7 +13,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install-jericho-kit.ps1 -Targ
 The installer:
 
 - creates `.jericho-upgrade-kit/` inside the target repo,
-- copies the prompts, docs, templates, examples, and project spine into that folder,
+- copies prompts, docs, templates, and examples into `.jericho-upgrade-kit/`,
+- copies the starter project spine into `project-spine/`,
 - installs project skills into `.claude/skills/`,
 - copies a root `CLAUDE.md` only if the target repo does not already have one,
 - avoids overwriting existing files unless `-Force` is used.
@@ -28,7 +29,7 @@ Copy these into the target repo:
 - `templates/` to `templates/jericho-upgrade-kit/`
 - `claude-prompts/` to `.jericho-upgrade-kit/claude-prompts/`
 
-Then open Claude Code in the target repo and paste `claude-prompts/00-ingest-this-kit.md`.
+Then open Claude Code in the target repo and paste `.jericho-upgrade-kit/claude-prompts/00-ingest-this-kit.md`.
 
 ## If the target repo already has CLAUDE.md
 
